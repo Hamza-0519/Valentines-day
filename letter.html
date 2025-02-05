@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // 3-5s
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+<body>
+
+    <div class="letter-links">
+        <p>💌 Click here for a surprize :</p>
+        <div class="links-container">
+            <a href="letter.html" class="link-btn">Me Yapping</a>
+            <a href="https://open.spotify.com/playlist/4WeCMvaLdgcxtzjXCCop8G?si=e7d7d203cb694bd6&pt=09e200631b471c1f210d789e34325fba" class="link-btn">playlist</a>
+        </div>
+    </div>
+    
+    <div class="sticker left-sticker"></div>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHB5dHdtOTBxcWlkbTJoZ2I1aW1xMTk0Z3pqMTd0cnJsNjNzM3hzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pHSNsdk7IzjzZ4qjOy/giphy.gif" alt="Cute Sticker">
+    </div>
+
+    <div class="container">
+        <h1>For My Love 💌</h1>
+        <p class="letter">
+            My Dear Jo,  
+            <br><br>
+            From the we have been togather, you have bought me nothing but joy. Your smile always brightens my day and cheer me up.  
+            <br><br>
+            This Valentine’s Day, I just want you to know how much you mean to me. Will you be my Valentine, not just for this valentine , but forever? ❤️  
+            <br><br>
+            Love,  
+            **[Your Dumb Boyfriend]**  
+        </p>
+        <a href="index.html" class="back-btn">Back to the First Page</a>
+    </div>
+
+</body>
+</html>
