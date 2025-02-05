@@ -1,0 +1,198 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffebee;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d32f2f;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#yes-btn {
+    background-color: #e91e63;
+    color: white;
+}
+
+#no-btn {
+    background-color: #bdbdbd;
+    color: black;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#response {
+    font-size: 1.5em;
+    color: #388e3c;
+    margin-top: 20px;
+}
+
+.letter {
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgb(245, 244, 246);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.6;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    background: #e91e63;
+    color: white;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #d81b60;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+.heart {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: url('heart.png'); /* Upload a heart sticker */
+    background-size: contain;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100vh); opacity: 0; }
+}
+
+.sticker {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: auto;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.big-sticker {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -55%) scale(1.1); }
+}
+.letter-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.letter-links p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff69b4; /* Pink color */
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.link-btn {
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link-btn:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+.letter-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sticker Styling */
+.sticker {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    z-index: 1;
+}
+
+.left-sticker {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-sticker {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Make sure the stickers are responsive */
+@media (max-width: 768px) {
+    .sticker {
+        width: 70px;
+    }
+}
