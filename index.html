@@ -23,9 +23,18 @@
 </script>
 
 <body>
-    <audio autoplay loop>
+   <audio id="bg-music" loop playsinline>
     <source src="https://drive.google.com/uc?export=download&id=1-XHHND8nYij0uXc3VK00HuGH8glAiSVm" type="audio/mp3">
 </audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("bg-music");
+        audio.play().catch(error => {
+            console.log("Autoplay prevented, waiting for user interaction...");
+        });
+    });
+</script>
 
     
     <div class="container">
